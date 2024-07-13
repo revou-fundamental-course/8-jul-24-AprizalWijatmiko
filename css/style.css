@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+header {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 8rem;
+}
+
+
+img {
+  max-width: 150px;
+}
+
+h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.gender-choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100hv;
+  gap: 8px;
+}
+
+.gender {
+  display: flex;
+  gap: 3rem;
+  font-size: 40px;
+}
+
+.gender label {
+  position: relative;
+  display: flex;
+  padding: 15px 40px 15px 3px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+}
+
+.gender label input {
+  appearance: none;
+}
+
+.gender label i {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gender label i:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #999;
+  transform: rotate(45deg);
+  transition: 0.2s;
+}
+
+.gender label i:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transform: rotate(315deg);
+  transition: 0.2s;
+}
+
+.gender label input:checked ~ i::before {
+  width: 50%;
+  transform: rotate(45deg) translate(-4px, 9px);
+}
+
+.gender label input:checked + i::before
+.gender label input:checked + i::after 
+{
+  background: #fff;
+}
+
+.gender label span {
+  color: #999;
+  transition: 0.2s;
+}
+
+.gender label span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #444;
+  border-radius: 30px;
+  box-sizing: border-box;
+  pointer-events: none;
+  transition: 0.2s;
+  z-index: -1;
+}
+
+.gender label:hover span::before {
+  border: 3px solid var(--clr)
+}
+
+.gender label input:checked ~ span::before {
+  background: var(--clr);
+  border: 3px solid var(--clr);
+  /* box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr); */
+} 
+
+.gender label input:checked ~ span {
+  color: #fff;
+}
+
