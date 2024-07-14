@@ -23,6 +23,13 @@
 <body>
   <header>
     <h1>BMI Calculator</h1>
+    <nav>
+      <div class="nav-link"> 
+        <ul>
+          <li><a href="#calculator">Calculator</a></li>
+          <li><a href="#foot">Contact</a></li>
+        </ul>
+      </div>
   </header>
 
   <main>
@@ -30,7 +37,7 @@
       <div class="gender-choice">
 
         <img src="assets/gender.png" alt="gender-symbol">
-        <h2>Please Select Your Gender</h2>
+        <h2 id="calculator">Please Select Your Gender</h2>
           <div class="gender">
           <label style="--clr:#7fc8f8;">
               <input type="radio" name="gender">
@@ -68,6 +75,29 @@
         </label>
       </div>
     </section>
+
+    <section>
+      <div class="operation">
+      <label for="">
+        <input type="button" value="Calculate BMI">
+      </label>
+
+      <label for="">
+        <input type="button" value="Reset">
+      </label>
+      </div>
+    </section>
+
+    <section>
+      <article>
+        <p>Body Mass Index (BMI) is a tool used to determine whether your weight is within a healthy range according to your height.
+          Use this BMI calculator to monitor your health and take the right steps to achive ideal body balance. Enter your 
+          <strong>weight, height, and age</strong> in the columns provided, then click the 'Calculate BMI' button to see the results. 
+          The BMI calculation results will give you an idea of whether you are underweight, normal, overweight or obese.
+        </p>
+      </article>
+    </section>
+
 
   </main>
 

@@ -1,7 +1,9 @@
-*, *:before *:after {
+*, 
+*:before,
+*:after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -10,9 +12,40 @@ body {
 }
 
 header {
-  text-align: center;
-  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 8rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+header nav ul { 
+  list-style: none;
+  width: 100%;
+  max-width: 1200px;
+  padding-block: 1rem;
+  margin-inline: auto;
+ 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+ 
+  z-index: 9999;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  background-color: #3b82f6;
+  padding: 10px 20px;
+  border-radius: 999px;
+}
+
+header nav ul li a:hover {
+  background-color: #f3f7fe;
+  color: #35374B;
 }
 
 img {
@@ -23,6 +56,7 @@ h2 {
   font-size: 25px;
   text-transform: uppercase;
   font-weight: 900;
+  margin-bottom: 10px;
 }
 
 .gender-choice {
@@ -132,6 +166,10 @@ h2 {
   font-size: 20px;
 }
 
+.form .unit {
+  font-weight: 400;
+}
+
 .form .placeholder {
   position: absolute;
   left: var(--field-padding);
@@ -174,6 +212,49 @@ h2 {
   background-size: 100% 0.15em, 100% 0.1em, 100%;
 }
 
+.operation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3.5rem;
+}
+
+.operation label input {
+  padding: 12px 18px;
+  font-size: 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  background-color: #f3f7fe;
+  border: none;
+  transition: .3s;
+}
+
+.operation label input:hover {
+  background-color: #3b82f6;
+  box-shadow: 0 0 0 5px #3b83f65f;
+  color: #fff;
+}
+
+section article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7rem;
+  background: #f7e1d7;
+  margin-left: 7.5rem;
+  margin-right: 7.5rem;
+  border-radius: 1rem;
+  box-shadow: 9px 9px #cebeb7;
+}
+
+section article p {
+  font-size: 20px;
+  text-align: center;
+  padding: 50px 150px;
+}
+
+
 footer {
   text-align: center;
   background-color: #3F3F3F;
@@ -185,7 +266,6 @@ footer {
   right: 0;
   
 }
-
 
 footer .social-media ul{
   display: flex;
