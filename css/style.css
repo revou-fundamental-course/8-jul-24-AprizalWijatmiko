@@ -1,9 +1,13 @@
-* {
+*, *:before *:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  /* background: #D8D8D8; */
+}
 
 header {
   text-align: center;
@@ -11,15 +15,14 @@ header {
   margin-bottom: 8rem;
 }
 
-
 img {
   max-width: 150px;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 25px;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  font-weight: 900;
 }
 
 .gender-choice {
@@ -34,7 +37,7 @@ h2 {
 .gender {
   display: flex;
   gap: 3rem;
-  font-size: 40px;
+  font-size: 25px;
 }
 
 .gender label {
@@ -62,40 +65,10 @@ h2 {
   align-items: center;
 }
 
-.gender label i:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: #999;
-  transform: rotate(45deg);
-  transition: 0.2s;
-}
-
-.gender label i:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: #fff;
-  transform: rotate(315deg);
-  transition: 0.2s;
-}
-
-.gender label input:checked ~ i::before {
-  width: 50%;
-  transform: rotate(45deg) translate(-4px, 9px);
-}
-
-.gender label input:checked + i::before
-.gender label input:checked + i::after 
-{
-  background: #fff;
-}
-
 .gender label span {
-  color: #999;
+  color: #000;
   transition: 0.2s;
+  font-weight: 300;
 }
 
 .gender label span::before {
@@ -120,10 +93,125 @@ h2 {
 .gender label input:checked ~ span::before {
   background: var(--clr);
   border: 3px solid var(--clr);
-  /* box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr); */
+  box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
 } 
 
 .gender label input:checked ~ span {
   color: #fff;
 }
+
+.field-form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 8rem;
+  font-weight: 300;
+}
+
+.form {
+  position: relative;
+  font-size: 20px;
+  border-top: 20px solid transparent;
+  margin-bottom: 5px;
+  display: inline-block;
+  --field-padding: 12px;
+}
+
+.form input {
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #f2f2f2;
+  padding: var(--field-padding);
+  border-radius: 3px;
+  width: 300px; 
+  height: 30px;
+  outline: none;
+  font-size: 20px;
+}
+
+.form .placeholder {
+  position: absolute;
+  left: var(--field-padding);
+  width: calc(100% - (var(--field-padding) * 2));
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  top: 30px;
+  line-height: 100%;
+  transform: translateY(-50%);
+  color: #aaa;
+  transition: 
+    top 0.3s ease,
+    color 0.3s ease,
+    font-size 0.3s ease;
+}
+
+.form input.dirty + .placeholder,
+.form input:focus + .placeholder,
+.form input:not(:placeholder-shown) + .placeholder {
+  top: -15px;
+  font-size: 15px;
+  color: #222;
+}
+
+.form input {
+  border-radius: 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background:
+    linear-gradient(90deg, #222, #222) center bottom/0 0.15em no-repeat,
+    linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
+    linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
+  transition: background-size 0.3s ease;
+}
+
+.form input.dirty,
+.form input:not(:placeholder-shown),
+.form input:focus {
+  background-size: 100% 0.15em, 100% 0.1em, 100%;
+}
+
+footer {
+  text-align: center;
+  background-color: #3F3F3F;
+  color: white;
+  padding: 2%;
+  margin-top: 20rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  
+}
+
+
+footer .social-media ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2.5rem;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+  margin-bottom: auto;
+}
+
+footer .social-media ul li {
+  list-style: none;
+}
+
+footer .social-media ul li a .fab{
+  color: rgb(207, 207, 207);
+}
+
+footer .social-media ul li a .fab:hover {
+  opacity: 0.7;
+}
+
+
+
+
+
+
 

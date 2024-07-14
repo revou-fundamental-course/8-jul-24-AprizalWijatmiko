@@ -5,7 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BMI Calculator</title>
 
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    >
+    
 </head>
 <body>
   <header>
@@ -15,6 +28,7 @@
   <main>
     <section>
       <div class="gender-choice">
+
         <img src="assets/gender.png" alt="gender-symbol">
         <h2>Please Select Your Gender</h2>
           <div class="gender">
@@ -30,12 +44,44 @@
               <span>Female</span>
           </label>
           </div>
+
       </div>
     </section>
+
+    <section>
+      <div class="field-form">
+        <label class="form">
+          <input type="text" placeholder="&nbsp;"/>
+          <span class="placeholder">Weight</span>
+          <span class="unit">kg</span>
+        </label>
+
+        <label class="form">
+          <input type="text" placeholder="&nbsp;"/>
+          <span class="placeholder">Height</span>
+          <span class="unit">cm</span>
+        </label>
+
+        <label class="form">
+          <input type="text" placeholder="&nbsp;"/>
+          <span class="placeholder">Age</span>
+        </label>
+      </div>
+    </section>
+
   </main>
 
   <footer>
-
+    <div class="foot">
+      <p id="foot">BMI Calculator &#169; 2024, Saya Sendiri</p>
+    </div>
+    <div class="social-media">
+      <ul>
+        <li><a href="https://www.youtube.com/@DicodingIndonesia" target="_blank"><i class="fab fa-youtube"></i></a></li>
+        <li><a href="https://www.instagram.com/afrizal_wijatmiko/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/muhammad-aprizal-b17176242/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+      </ul>
+    </div>
   </footer>
 </body>
 </html>
