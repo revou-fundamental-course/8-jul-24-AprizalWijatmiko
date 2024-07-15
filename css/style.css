@@ -8,10 +8,9 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  /* background: #D8D8D8; */
 }
 
-header {
+.head-nav {
   display: flex;
   justify-content: space-between;
   margin-bottom: 8rem;
@@ -52,7 +51,7 @@ img {
   max-width: 150px;
 }
 
-h2 {
+h1   {
   font-size: 25px;
   text-transform: uppercase;
   font-weight: 900;
@@ -127,7 +126,7 @@ h2 {
 .gender label input:checked ~ span::before {
   background: var(--clr);
   border: 3px solid var(--clr);
-  box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
+  box-shadow: 0 0 20px var(--clr), 0 0 5px var(--clr);
 } 
 
 .gender label input:checked ~ span {
@@ -223,7 +222,7 @@ h2 {
 .operation label input {
   padding: 12px 18px;
   font-size: 20px;
-  border-radius: 30px;
+  border-radius: 8px;
   font-weight: bold;
   background-color: #f3f7fe;
   border: none;
@@ -236,22 +235,120 @@ h2 {
   color: #fff;
 }
 
-section article {
+section .def {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 7rem;
   background: #f7e1d7;
   margin-left: 7.5rem;
-  margin-right: 7.5rem;
-  border-radius: 1rem;
-  box-shadow: 9px 9px #cebeb7;
+  margin-right: 7.5rem; 
+  border-radius: 8px;
+  box-shadow: 5px 5px #cebeb7;
 }
 
-section article p {
+section .def p {
   font-size: 20px;
   text-align: center;
   padding: 50px 150px;
+}
+
+.result-container {
+  background-color: #ffffff;
+  border: 2px solid #dcdcdc;
+  border-left: none;
+  border-right: none;
+  padding: 20px;
+  padding-bottom: 40px;
+  text-align: center;
+  margin-top: 6.5rem;
+}
+
+.result-header {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.result-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.bmi-value {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  font-size: 40px;
+  margin-bottom: 20px;
+  margin-left: -13rem;
+}
+
+.bmi-number {
+  font-size: 70px;
+  font-weight: bold;
+  color: #ffd166;
+}
+
+.reset-button {
+  background-color: #f3f7fe;
+  border: none;
+  transition: .3s;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.reset-button:hover {
+  background-color: #3b82f6;
+  box-shadow: 0 0 0 5px #3b83f65f;
+  color: #fff;
+}
+
+.bmi-category {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 8px;
+  width: 100%;
+  padding: 20px;
+  margin-right: -16rem;
+  width: 50%;
+  height: 225px;
+  margin-top: -30px;
+}
+
+.bmi-header {
+  background-color: #ffd166;
+  border-radius: 8px 8px 0 0;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  color: #555;
+  margin: -20px -20px 10px -20px;
+}
+
+.bmi-description {
+  font-size: 20px;
+  color: #555;
+  text-align: left;
+  margin-top: 15px;
+}
+
+.disclaimer {
+  font-size: 17px;
+  text-align: center;
+  margin-top: 5.5rem;
+  font-weight: bold;
+}
+
+.disclaimer span {
+  color: red;
+  font-size: 18px;
 }
 
 
@@ -264,7 +361,6 @@ footer {
   position: absolute;
   left: 0;
   right: 0;
-  
 }
 
 footer .social-media ul{

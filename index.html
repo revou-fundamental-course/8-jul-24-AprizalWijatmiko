@@ -21,7 +21,7 @@
     
 </head>
 <body>
-  <header>
+  <header class="head-nav">
     <h1>BMI Calculator</h1>
     <nav>
       <div class="nav-link"> 
@@ -37,7 +37,7 @@
       <div class="gender-choice">
 
         <img src="assets/gender.png" alt="gender-symbol">
-        <h2 id="calculator">Please Select Your Gender</h2>
+        <h1 id="calculator">Please Select Your Gender</h1>
           <div class="gender">
           <label style="--clr:#7fc8f8;">
               <input type="radio" name="gender">
@@ -89,7 +89,7 @@
     </section>
 
     <section>
-      <article>
+      <article class="def">
         <p>Body Mass Index (BMI) is a tool used to determine whether your weight is within a healthy range according to your height.
           Use this BMI calculator to monitor your health and take the right steps to achive ideal body balance. Enter your 
           <strong>weight, height, and age</strong> in the columns provided, then click the 'Calculate BMI' button to see the results. 
@@ -98,7 +98,35 @@
       </article>
     </section>
 
+    <section>
+      <div class="result-container">
+        <div class="result-header">
+            Result
+        </div>
+        <div class="result-body">
+            <label class="bmi-value">
+                Your BMI Is <span class="bmi-number">17.5</span>
+                <input class="reset-button" type="button" value="Reset"></input>
+            </label>
 
+            <div class="bmi-category">
+                <div class="bmi-header">
+                    Underweight <span>(less than 18.5)</span>
+                </div>
+                <div class="bmi-description">
+                    Consider increasing your calorie intake by choosing nutrient-dense foods. Focus on foods such as nuts,
+                    seeds, lean meats, dairy products, and fruits and vegetables. Consult a nutritionist or doctor for a 
+                    safe and healthy weight gain plan.
+                </div>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+          <div> <span>*</span> This BMI calculator is for reference only and does not replace professional medical advice.
+            Always consult a doctor or nutritionist for a more accurate health evaluation.</div>
+        </div>
+    </div>
+    </section>
   </main>
 
   <footer>
