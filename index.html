@@ -57,76 +57,139 @@
 
     <section>
       <div class="field-form">
-        <label class="form">
-          <input type="text" placeholder="&nbsp;"/>
-          <span class="placeholder">Weight</span>
-          <span class="unit">kg</span>
-        </label>
+          <label class="form">
+              <input type="text" id="weight" placeholder="&nbsp;" />
+              <span class="placeholder">Weight</span>
+              <span class="unit">kg</span>
+          </label>
 
-        <label class="form">
-          <input type="text" placeholder="&nbsp;"/>
-          <span class="placeholder">Height</span>
-          <span class="unit">cm</span>
-        </label>
+          <label class="form">
+              <input type="text" id="height" placeholder="&nbsp;" />
+              <span class="placeholder">Height</span>
+              <span class="unit">cm</span>
+          </label>
 
-        <label class="form">
-          <input type="text" placeholder="&nbsp;"/>
-          <span class="placeholder">Age</span>
-        </label>
+          <label class="form">
+              <input type="text" id="age" placeholder="&nbsp;" />
+              <span class="placeholder">Age</span>
+          </label>
       </div>
-    </section>
+  </section>
 
-    <section>
+  <section>
       <div class="operation">
-      <label for="">
-        <input type="button" value="Calculate BMI">
-      </label>
+          <label for="">
+              <input type="button" value="Calculate BMI" onclick="calculateBMI()">
+          </label>
 
-      <label for="">
-        <input type="button" value="Reset">
-      </label>
+          <label for="">
+              <input type="button" value="Reset" onclick="resetForm()">
+          </label>
       </div>
-    </section>
+  </section>
 
-    <section>
+  <section>
       <article class="def">
-        <p>Body Mass Index (BMI) is a tool used to determine whether your weight is within a healthy range according to your height.
-          Use this BMI calculator to monitor your health and take the right steps to achive ideal body balance. Enter your 
-          <strong>weight, height, and age</strong> in the columns provided, then click the 'Calculate BMI' button to see the results. 
-          The BMI calculation results will give you an idea of whether you are underweight, normal, overweight or obese.
-        </p>
+          <p>Body Mass Index (BMI) is a tool used to determine whether your weight is within a healthy range according to your height.
+              Use this BMI calculator to monitor your health and take the right steps to achieve ideal body balance. Enter your 
+              <strong>weight, height, and age</strong> in the columns provided, then click the 'Calculate BMI' button to see the results. 
+              The BMI calculation results will give you an idea of whether you are underweight, normal, overweight or obese.
+          </p>
       </article>
-    </section>
+  </section>
 
-    <section>
-      <div class="result-container">
-        <div class="result-header">
-            Result
-        </div>
-        <div class="result-body">
-            <label class="bmi-value">
-                Your BMI Is <span class="bmi-number">17.5</span>
-                <input class="reset-button" type="button" value="Reset"></input>
-            </label>
+  <section>
+      <div class="result-container" id="underweight">
+          <div class="result-header">Result</div>
+          <div class="result-body">
+              <p class="bmi-value">
+                  Your BMI Is <span class="under-number" id="bmiUnderweight">N/A</span>
+                  <input class="reset-button" type="button" value="Reset" onclick="resetForm()">
+              </p>
+              <div class="under-category">
+                  <div class="under-header">Underweight <span>(less than 18.5)</span></div>
+                  <div class="bmi-description">
+                      Consider increasing your calorie intake by choosing nutrient-dense foods. Focus on foods such as nuts,
+                      seeds, lean meats, dairy products, and fruits and vegetables. Consult a nutritionist or doctor for a 
+                      safe and healthy weight gain plan.
+                  </div>
+              </div>
+          </div>
+          <div class="disclaimer">
+              <div> <span>*</span> This BMI calculator is for reference only and does not replace professional medical advice.
+                  Always consult a doctor or nutritionist for a more accurate health evaluation.
+              </div>
+          </div>
+      </div>
 
-            <div class="bmi-category">
-                <div class="bmi-header">
-                    Underweight <span>(less than 18.5)</span>
-                </div>
-                <div class="bmi-description">
-                    Consider increasing your calorie intake by choosing nutrient-dense foods. Focus on foods such as nuts,
-                    seeds, lean meats, dairy products, and fruits and vegetables. Consult a nutritionist or doctor for a 
-                    safe and healthy weight gain plan.
-                </div>
-            </div>
-        </div>
+      <div class="result-container" id="normal">
+          <div class="result-header">Result</div>
+          <div class="result-body">
+              <p class="bmi-value">
+                  Your BMI Is <span class="normal-number" id="bmiNormal">N/A</span>
+                  <input class="reset-button" type="button" value="Reset" onclick="resetForm()">
+              </p>
+              <div class="normal-category">
+                  <div class="normal-header">Normal <span>(18.5 - 24.9)</span></div>
+                  <div class="bmi-description">
+                      Continue to maintain a healthy lifestyle eat a balanced diet and exercise regularly. Have regular health checks 
+                      to ensure your body remains in optimal condition.
+                  </div>
+              </div>
+          </div>
+          <div class="disclaimer">
+              <div> <span>*</span> This BMI calculator is for reference only and does not replace professional medical advice.
+                  Always consult a doctor or nutritionist for a more accurate health evaluation.
+              </div>
+          </div>
+      </div>
 
-        <div class="disclaimer">
-          <div> <span>*</span> This BMI calculator is for reference only and does not replace professional medical advice.
-            Always consult a doctor or nutritionist for a more accurate health evaluation.</div>
-        </div>
-    </div>
-    </section>
+      <div class="result-container" id="overweight">
+          <div class="result-header">Result</div>
+          <div class="result-body">
+              <p class="bmi-value">
+                  Your BMI Is <span class="over-number" id="bmiOverweight">N/A</span>
+                  <input class="reset-button" type="button" value="Reset" onclick="resetForm()">
+              </p>
+              <div class="over-category">
+                  <div class="over-header">Overweight <span>(25.0 - 29.9)</span></div>
+                  <div class="bmi-description">
+                      Adopt a healthier diet by reducing your intake of high-calorie foods, sugar and saturated fat. Add more vegetables, fruits and lean protein to your diet. Increase 
+                      physical activity, such as walking, running, or swimming. Consult a healthcare professional for more personalized 
+                      guidance.
+                  </div>
+              </div>
+          </div>
+          <div class="disclaimer">
+              <div> <span>*</span> This BMI calculator is for reference only and does not replace professional medical advice.
+                  Always consult a doctor or nutritionist for a more accurate health evaluation.
+              </div>
+          </div>
+      </div>
+
+      <div class="result-container" id="obesity">
+          <div class="result-header">Result</div>
+          <div class="result-body">
+              <p class="bmi-value">
+                  Your BMI Is <span class="obese-number" id="bmiObesity">N/A</span>
+                  <input class="reset-button" type="button" value="Reset" onclick="resetForm()">
+              </p>
+              <div class="obese-category">
+                  <div class="obese-header">Obesity <span>(30.0 - more)</span></div>
+                  <div class="bmi-description">
+                      It is important to take steps to reduce weight. Start by adopting a healthier, lower calorie diet. Do regular physical activity, at least 150 minutes per week, such as 
+                      brisk walking, cycling, or other activities that increase your heart rate. Working with a doctor or nutritionist can help you create 
+                      an effective and safe weight loss plan.
+                  </div>
+              </div>
+          </div>
+          <div class="disclaimer">
+              <div> <span>*</span> This BMI calculator is for reference only and does not replace professional medical advice.
+                  Always consult a doctor or nutritionist for a more accurate health evaluation.
+              </div>
+          </div>
+      </div>
+  </section>
   </main>
 
   <footer>
@@ -141,5 +204,7 @@
       </ul>
     </div>
   </footer>
+
+  <script src="js/hitung.js"></script>
 </body>
 </html>

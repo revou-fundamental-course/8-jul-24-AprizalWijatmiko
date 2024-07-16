@@ -1,3 +1,12 @@
+:root {
+  --underweight: ;
+  --normal: ;
+  --overweight: ;
+  --obese: ;
+}
+
+
+
 *, 
 *:before,
 *:after {
@@ -112,6 +121,7 @@ h1   {
   width: 100%;
   height: 100%;
   border: 3px solid #444;
+  background: #f3f7fe;
   border-radius: 30px;
   box-sizing: border-box;
   pointer-events: none;
@@ -254,6 +264,7 @@ section .def p {
 }
 
 .result-container {
+  display: none;
   background-color: #ffffff;
   border: 2px solid #dcdcdc;
   border-left: none;
@@ -285,10 +296,28 @@ section .def p {
   margin-left: -13rem;
 }
 
-.bmi-number {
+.under-number {
   font-size: 70px;
   font-weight: bold;
   color: #ffd166;
+}
+
+.normal-number {
+  font-size: 70px;
+  font-weight: bold;
+  color: #57cc99;
+}
+
+.over-number {
+  font-size: 70px;
+  font-weight: bold;
+  color: #d88648;
+}
+
+.obese-number {
+  font-size: 70px;
+  font-weight: bold;
+  color: #bc4749;
 }
 
 .reset-button {
@@ -309,9 +338,9 @@ section .def p {
   color: #fff;
 }
 
-.bmi-category {
+.under-category {
   background-color: #fff3cd;
-  border: 1px solid #ffeeba;
+  border: 3px solid #ffd166;
   border-radius: 8px;
   width: 100%;
   padding: 20px;
@@ -321,14 +350,83 @@ section .def p {
   margin-top: -30px;
 }
 
-.bmi-header {
+.under-header {
   background-color: #ffd166;
   border-radius: 8px 8px 0 0;
   padding: 10px;
   font-weight: bold;
   font-size: 30px;
   text-align: center;
-  color: #555;
+  color: #fff;
+  margin: -20px -20px 10px -20px;
+}
+
+.normal-category {
+  background-color: #c7efd9;
+  border: 3px solid #4bad7e;
+  border-radius: 8px;
+  width: 100%;
+  padding: 20px;
+  margin-right: -16rem;
+  width: 50%;
+  height: 225px;
+  margin-top: -30px;
+}
+
+.normal-header {
+  background-color: #4bad7e;
+  border-radius: 8px 8px 0 0;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  margin: -20px -20px 10px -20px;
+}
+
+.over-category {
+  background-color: #efba95;
+  border: 3px solid #d88648;
+  border-radius: 8px;
+  width: 100%;
+  padding: 20px;
+  margin-right: -16rem;
+  width: 50%;
+  height: 225px;
+  margin-top: -30px;
+}
+
+.over-header {
+  background-color: #d88648;
+  border-radius: 8px 8px 0 0;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  margin: -20px -20px 10px -20px;
+}
+
+.obese-category {
+  background-color: #f2c4c9;
+  border: 3px solid #bc4749;
+  border-radius: 8px;
+  width: 100%;
+  padding: 20px;
+  margin-right: -16rem;
+  width: 50%;
+  height: 225px;
+  margin-top: -30px;
+}
+
+.obese-header {
+  background-color: #bc4749;
+  border-radius: 8px 8px 0 0;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
   margin: -20px -20px 10px -20px;
 }
 
@@ -367,9 +465,9 @@ footer .social-media ul{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 2.5rem;
+  margin-top: 1rem;
   gap: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-bottom: auto;
 }
 
