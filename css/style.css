@@ -399,14 +399,17 @@ section .def p {
   font-size: 18px;
 }
 
-
 footer {
   text-align: center;
   background-color: #3F3F3F;
   color: white;
   padding: 2%;
-  margin-top: 8rem;
-  
+  margin-top: 2rem;
+}
+
+.foot {
+  font-size: 12px;
+  margin-top: 1rem;
 }
 
 footer .social-media ul{
@@ -415,12 +418,15 @@ footer .social-media ul{
   align-items: center;
   margin-top: 1rem;
   gap: 1.5rem;
-  font-size: 1.6rem;
   margin-bottom: auto;
 }
 
 footer .social-media ul li {
   list-style: none;
+}
+
+footer .social-media ul li a {
+  font-size: 1.5rem;
 }
 
 footer .social-media ul li a .fab{
@@ -440,7 +446,7 @@ footer .social-media ul li a .fab:hover {
   }
 
   .weight, .height {
-    margin-left: 2rem;
+    margin-left: 1.6rem;
   }
 
   .result-body {
@@ -455,9 +461,7 @@ footer .social-media ul li a .fab:hover {
   .result-header, .bmi-value {
     text-align: center;
   }
-}
 
-@media screen and (max-width: 1034px) {
   header h1 {
     font-size: 2rem;
   }
@@ -542,111 +546,5 @@ footer .social-media ul li a .fab:hover {
   .disclaimer span {
     font-size: 14px; 
   }
-
-
-
-
-  
   
 }
-/* @media screen and (max-width: 480px) {
-  .form {
-    width: 100%;
-    text-align: center;
-  }
-
-  .field-form {
-    flex-direction: column;
-  }
-
-  .result-body {
-    flex-direction: column;
-  }
-
-  .under-category, .normal-category, .over-category, .obese-category {
-    width: 90%;
-    margin-top: 10px;
-  }
-
-  .result-header, .bmi-value {
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .form {
-    width: 100%;
-    text-align: center;
-  }
-
-  .field-form {
-    flex-direction: column;
-  }
-
-  .result-body {
-    flex-direction: column;
-  }
-
-  .under-category, .normal-category, .over-category, .obese-category {
-    width: 90%;
-    margin-top: 10px;
-  }
-
-  .result-header, .bmi-value {
-    text-align: center;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .form {
-    width: 90%;
-  }
-
-  .field-form {
-    flex-direction: row;
-  }
-
-  .result-body {
-    flex-direction: row;
-  }
-
-  .under-category, .normal-category, .over-category, .obese-category {
-    width: 70%;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .form {
-    width: 80%;
-  }
-
-  .field-form {
-    flex-direction: row;
-  }
-
-  .result-body {
-    flex-direction: row;
-  }
-
-  .under-category, .normal-category, .over-category, .obese-category {
-    width: 60%;
-  } 
-}
-
-@media screen and (min-width: 1201px) {
-  .form {
-    width: 70%;
-  }
-
-  .field-form {
-    flex-direction: row;
-  }
-
-  .result-body {
-    flex-direction: row;
-  }
-
-  .under-category, .normal-category, .over-category, .obese-category {
-    width: 50%;
-  }
-} */
